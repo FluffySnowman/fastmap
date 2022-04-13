@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo, tcpdump"
+echo "PREREQUISITES: bitches"
 echo "PLEASE INSTALL THESE libraries WITH YOUR PACKAGE MANAGER"
 echo "NOTE: USE LOWER CASE FOR ALL INPUTS"
 
@@ -14,7 +14,7 @@ echo ""
 
 read -p "Value of i: " increment
 echo ""
-echo "NOW THE PROGRAM WILL LOOP. PRESS CNTL+C TO QUIT"
+echo "NOW THE PROGRAM WILL LOOP. PRESS CTRL+C TO BREAK"
 echo ""
 
 while [ $increment -lt 100 ]
@@ -121,4 +121,4 @@ do
 
 done
 
-figlet -f slant "Goodbye!" | lolcat
+figlet -f slant "i love cock!" | lolcat
