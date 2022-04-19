@@ -1,21 +1,34 @@
 #!/bin/bash
 
-echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo, tcpdump, traceroute, ss, host, nslookup, mtr"
-echo "PLEASE INSTALL THESE libraries WITH YOUR PACKAGE MANAGER"
-echo "NOTE: USE LOWER CASE FOR ALL INPUTS"
+#echo "PREREQUISITES: figlet, curl, jq, lolcat, nmap, sudo, tcpdump, traceroute, ss, host, nslookup, mtr"
+#echo "PLEASE INSTALL THESE libraries WITH YOUR PACKAGE MANAGER"
+#echo "NOTE: USE LOWER CASE FOR ALL INPUTS"
 
-read -p "Press [ENTER] to start program"
+# Hopefully this works
+# https://unix.stackexchange.com/questions/235605/check-if-all-listed-packages-are-installed-in-bash
+printf "\033c"
+echo "Checking Packages..."
+packages=("figlet" "curl" "jq" "lolcat" "nmap" "sudo" "tcpdump" "traceroute" "ss" "host" "nslookup" "mtr")
+for pkg in ${packages[@]}; do
 
-echo ""
+    is_pkg_installed=$(dpkg-query -W --showformat='${Status}\n' ${pkg} | grep "install ok installed")
+
+    if [ "${is_pkg_installed}" == "install ok installed" ]; then
+        echo ${pkg} is installed.
+    else
+	apt-get install -y $pkg
+    fi
+done
+
+
+
+
+# Terminal Clear
+printf "\033c"
 
 figlet -f slant "FastMap" | lolcat
 
-echo ""
-
-read -p "Value of i: " increment
-echo ""
-echo "NOW THE PROGRAM WILL LOOP. PRESS CNTL+C TO QUIT"
-echo ""
+echo "\nValue of i: $increment\nNOW THE PROGRAM WILL LOOP. PRESS CNTL+C TO QUIT\n\n"
 
 divider="================================================================" | lolcat
 
