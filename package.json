@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "epress": "^0.0.1-security",
+    "express.js": "^1.0.0"
+  },
+  "name": "fastmap",
+  "description": "<p align=\"center\"><img src=\"/docs/fastmap_icon.png\" align=\"middle\" alt=\"fastmap\" /></p>",
+  "version": "1.0.0",
+  "main": "webmap_main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FluffySnowman/fastmap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FluffySnowman/fastmap/issues"
+  },
+  "homepage": "https://github.com/FluffySnowman/fastmap#readme"
+}
