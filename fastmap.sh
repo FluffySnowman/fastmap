@@ -391,6 +391,13 @@ do
 			cat iplookup.txt | jq .
 			rm iplookup.txt
 	
+	elif [[ $prompt_input == "who" ]] ; then
+
+		echo "================================================================" | lolcat
+		read -p "Enter IP to find Information on>>> " whois_ip
+		whois $whois_ip
+		echo "================================================================" | lolcat
+	
 	elif [[ $prompt_input == "help" ]] ; then
 
 		echo "================================================================" | lolcat
@@ -419,7 +426,8 @@ do
 		echo "fapi: opens fing api calling module" 
 		echo "wifiaudit: tried to hack wifi networks"
 		echo "scan: scans for wireless networks around you"
-		echo "iplookup: finds information about specified IP" | randtype -t 5,2000 | lolcat 
+		echo "who: lookup ip with WHOIS" | randtype -t 5,2000 | lolcat
+		echo "iplookup: finds information about specified IP" 
 		RED='\033[0;31m'
 		printf "${RED}exit/quit/q: exits program\n"
 		echo "================================================================" | lolcat
@@ -427,6 +435,8 @@ do
 	else 
 		
 		$prompt_input
+		echo "Command not found in the fastmap program!"
+		echo "Use the help command to see all commands available" | lolcat
 	
 	fi
 
