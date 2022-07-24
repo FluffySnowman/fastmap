@@ -384,7 +384,7 @@ do
 
 		fi
 
-	elif [[ $prompt_input == "iplookup" ]] ; then
+	elif [[ $prompt_input == "ipl" ]] ; then
 
 			read -p "IP to lookup>>> " iplookup_0x1
 			curl http://ip-api.com/json/$iplookup_0x1 > iplookup.txt
@@ -421,13 +421,13 @@ do
 		echo "nsl: lookup nameservers"
 		echo "lhost: lookup hosts"
 		echo "pymap: runs python network mapping module" | randtype -t 5,2000 | lolcat
-		echo "pyport: runs python port scanning module" | randtype -t 5,2000 | lolcat
+		echo "pyport: runs python port scanning module"
 		echo "ss: shows ss runners" 
 		echo "fapi: opens fing api calling module" 
 		echo "wifiaudit: tried to hack wifi networks"
 		echo "scan: scans for wireless networks around you"
 		echo "who: lookup ip with WHOIS" | randtype -t 5,2000 | lolcat
-		echo "iplookup: finds information about specified IP" 
+		echo "ipl: finds information about specified IP" | randtype -t 5,2000 | lolcat
 		RED='\033[0;31m'
 		printf "${RED}exit/quit/q: exits program\n"
 		echo "================================================================" | lolcat
