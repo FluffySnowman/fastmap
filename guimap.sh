@@ -268,4 +268,4 @@ while [ 1 -lt 2 ] ; do
     fi
 done
 echo "Thank you for using GUIMap!!"
-figlet -f slant "CLI Mode Enabled" | randtype -t 5,2000| lolcat
+figlet -f slant "CLI Mode Disabled" | randtype -t 5,2000| lolcat
