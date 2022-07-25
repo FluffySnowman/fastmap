@@ -432,6 +432,10 @@ do
 		printf "${RED}exit/quit/q: exits program\n"
 		echo "================================================================" | lolcat
 	
+	elif [[ $prompt_input == "" ]] ; then
+
+		echo "hello" > /dev/null
+
 	else 
 		
 		$prompt_input
