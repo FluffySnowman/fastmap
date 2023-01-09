@@ -16,7 +16,7 @@ function stresstest() {
 			read -p "PORT to stress>>> " stresstest_port		
 			read -p "Amount of time to stress (seconds)>>> " stresstest_seconds
 
-			tmux send-keys -t 1 "python3 start.py udp ""$stresstest_urlip":"$stresstest_port"" 1000 $stresstest_seconds" ENTER
+			tmux send-keys -t 1 "python3 start.py udp ""$stresstest_urlip":"$stresstest_port"" 10000 $stresstest_seconds" ENTER
 			tmux attach-session
 
 			notify-send "STRESS TEST COMPLETE :)"
@@ -34,7 +34,7 @@ function stresstest() {
 	
 			read -p "Amount of time to stress (seconds)>>> " stresstest_seconds
 			
-			tmux send-keys -t 1 "python3 start.py tcp ""$stresstest_urlip":"$stresstest_port"" 1000 "$stresstest_seconds"" ENTER
+			tmux send-keys -t 1 "python3 start.py tcp ""$stresstest_urlip":"$stresstest_port"" 10000 "$stresstest_seconds"" ENTER
 			tmux attach-session
 
 			notify-send "STRESS TEST COMPLETE :)"
