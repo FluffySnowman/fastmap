@@ -2,6 +2,8 @@
 
 Fastmap is an efficient tool for linux made for network admins and analysts. It combines the power of nmap, tcpdump, snort and much more.
 
+ANNOUNCEMENT: Due to some technical issues I have had to re-upload and remake this repository. The version history is gone but the current version is functional. Create an issue if there's any bugs. Thanks!
+
 NOTE: Some code is going through refactoring hence some modules may/may not work. Create an issue if there are any problems and I shall get back to you as soon as I can.
 
 # ADDED [`zmap`](https://github.com/FluffySnowman/fastmap/wiki/Usage#zmap) MODULE. CHECK WIKI FOR THE USAGE | GUI SUPPORT (GTK+). USE THE `GUI` COMMAND TO USE THE GUI FASTMAP INTERFACE. Working on: `mscn` (masscan) module.
