@@ -12,6 +12,15 @@ source ./src/stresstest.sh
 source ./src/zmap.sh
 source ./src/tpackets.sh
 
+# COLOURS
+REDCOLOUR='\033[0;31m'
+GREENCOLOUR='\033[0;32m'
+BLUECOLOUR='\033[0;34m' 
+BOLDBLUECOLOUR='\033[1;34m'
+YELLOWCOLOUR='\033[1;33m'
+RESETCOLOUR='\033[0m' # BACK TO NORMAL
+
+
 
 echo "NOTE: USE LOWER CASE FOR ALL INPUTS"
 
@@ -22,19 +31,15 @@ echo ""
 banner
 
 echo ""
-echo "Made by the FluffySnowman" | lolcat
+echo "Made by the FluffySnowman"
 echo ""
 
-read -p "Value of i: " increment
-echo ""
-echo "NOW THE PROGRAM WILL LOOP. PRESS CNTL+C TO QUIT"
-echo "EDIT THE FILE /etc/zmap/blacklist.conf TO REMOVE LOCAL IP ADDRESSES BY ADDING A HASH BEFORE THEM" | randtype -t 5,12000 | lolcat
-echo "MAKE SURE YOU HAVE SNORT INSTALLED AND CONFIGURED BEFORE RUNNING THE SNORT COMMAND!!!"
+echo "edit /etc/zmap/blacklist.conf to remove local IPs" 
 echo ""
 
 echo "================================================================" | lolcat
 
-while [ $increment -lt 100 ]
+while [ 1 -lt 100 ]
 do
 
 	read -p ">>> " prompt_input
@@ -284,26 +289,30 @@ do
 
 	elif [[ $prompt_input == "help" ]] ; then
 
-		echo "================================================================" | lolcat
-		echo "help: displays this help menu"
-		echo "banner: prints fastmap banner with a random figlet font"
-		echo "netmap: opens network mapping module" | randtype -t 5,2000 | lolcat
-		echo "rscan: pipes input to rustscan and displays results" | randtype -t 5,2000 | lolcat 
-		echo "zenmap: starts nmap-gui (zenmap) through the terminal"
-		echo ""
-		echo ""
-		echo "[NEW FEATURE]: zmap: opens zmap module" | randtype -t 5,2000 | lolcat
-		echo "[NEW FEATURE]: mscn: opens masscan module" | randtype -t 5,2000 | lolcat
-		echo ""
-		echo ""
-		echo "gui: STARTS GUI FASTMAP MODULE" | randtype -t 5,2000 | lolcat
-		echo "tpackets: captures packets on specified interface" # | lolcat
-		echo "ping: opens ping module"
-		echo "stresstest: opens module to test the response time of servers" | randtype -t 5,2000 | lolcat
-		echo "traffic: open traffic total monitoring module"
-		echo "snort: sniffs network for malicious packets and intruisions" | randtype -t 5,2000 | lolcat
+		# echo -e "${GREENCOLOUR}================================================================${RESETCOLOUR}" 
+		echo -e "\nhelp\t\tdisplays this help menu"
+		echo -e "banner\t\tprints fastmap banner with a random figlet font"
+		echo -e "\n${BLUECOLOUR}netmap\t\t${RESETCOLOUR}opens network mapping module" 
+		echo -e "${BLUECOLOUR}rscan\t\t${RESETCOLOUR}pipes input to rustscan and displays results" 
+		echo -e "${BLUECOLOUR}zenmap\t\t${RESETCOLOUR}starts nmap-gui (zenmap) through the terminal"
+		echo -e "${BLUECOLOUR}zmap\t\t${RESETCOLOUR}opens zmap module"
+		echo -e "${BLUECOLOUR}mscs\t\t${RESETCOLOUR}opens masscan module"
+
+		# echo -e "${BLUECOLOUR} ${RESETCOLOUR}"
+
+		echo -e "\n${GREENCOLOUR}gui\t\t${RESETCOLOUR}starts zenity GUI fastmap\n"
+
+		echo -e "${YELLOWCOLOUR}tpackets\t${RESETCOLOUR}captures packets on specified interface"
+		echo -e "${YELLOWCOLOUR}ping\t\t${RESETCOLOUR}opens ping module"
+
+		echo -e "${GREENCOLOUR}stresstest\t${RESETCOLOUR}stress test specified IP's bandwidth etc"
+
+		echo -e "${BLUECOLOUR} ${RESETCOLOUR}"
+		echo -e "${YELLOWCOLOUR}traffic\t${RESETCOLOUR}total traffic monitoring module"
+
+		echo -e "${YELLOWCOLOUR}snort\t\t${RESETCOLOUR}sniffs network for malicious packets and intruisions"
 		echo "speed: opens speed testing module (speedtest-cli)"
-		echo "gp: opens graphical pinging module" | randtype -t 5,2000 | lolcat
+		echo "gp: opens graphical pinging module" | lolcat
 		echo "trace: traces packets to specified host"
 		echo "gtrace: traces packets to specified host in GUI" #| lolcat
 		echo "nsl: lookup nameservers"
@@ -315,7 +324,7 @@ do
 		echo "wifiaudit: tried to hack wifi networks"
 		echo "scan: scans for wireless networks around you"
 		echo "who: lookup ip with WHOIS" #| randtype -t 5,2000 | lolcat
-		echo "ipl: finds information about specified IP" | randtype -t 5,2000 | lolcat
+		echo "ipl: finds information about specified IP" | lolcat
         echo ""
         echo ""
 		RED='\033[0;31m'
