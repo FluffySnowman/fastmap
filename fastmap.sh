@@ -298,38 +298,32 @@ do
 		echo -e "${BLUECOLOUR}zmap\t\t${RESETCOLOUR}opens zmap module"
 		echo -e "${BLUECOLOUR}mscs\t\t${RESETCOLOUR}opens masscan module"
 
-		# echo -e "${BLUECOLOUR} ${RESETCOLOUR}"
-
-		echo -e "\n${GREENCOLOUR}gui\t\t${RESETCOLOUR}starts zenity GUI fastmap\n"
+		echo -e "\n${GREENCOLOUR}gui\t\t${RESETCOLOUR}starts zenity GUI fastmap"
+		echo -e "${GREENCOLOUR}stresstest\t${RESETCOLOUR}stress test specified IP's bandwidth etc\n"
 
 		echo -e "${YELLOWCOLOUR}tpackets\t${RESETCOLOUR}captures packets on specified interface"
 		echo -e "${YELLOWCOLOUR}ping\t\t${RESETCOLOUR}opens ping module"
-
-		echo -e "${GREENCOLOUR}stresstest\t${RESETCOLOUR}stress test specified IP's bandwidth etc"
-
-		echo -e "${BLUECOLOUR} ${RESETCOLOUR}"
-		echo -e "${YELLOWCOLOUR}traffic\t${RESETCOLOUR}total traffic monitoring module"
-
+		echo -e "${YELLOWCOLOUR}traffic\t\t${RESETCOLOUR}total traffic monitoring module"
 		echo -e "${YELLOWCOLOUR}snort\t\t${RESETCOLOUR}sniffs network for malicious packets and intruisions"
-		echo "speed: opens speed testing module (speedtest-cli)"
-		echo "gp: opens graphical pinging module" | lolcat
-		echo "trace: traces packets to specified host"
-		echo "gtrace: traces packets to specified host in GUI" #| lolcat
-		echo "nsl: lookup nameservers"
-		echo "lhost: lookup hosts"
-		echo "pymap: runs python network mapping module" #| randtype -t 5,2000 | lolcat
-		echo "pyport: runs python port scanning module"
-		echo "ss: shows ss runners" 
-		echo "fapi: opens fing api calling module" 
-		echo "wifiaudit: tried to hack wifi networks"
-		echo "scan: scans for wireless networks around you"
-		echo "who: lookup ip with WHOIS" #| randtype -t 5,2000 | lolcat
-		echo "ipl: finds information about specified IP" | lolcat
+		echo -e "${YELLOWCOLOUR}speed\t\t${RESETCOLOUR}opens speed testing module (speedtest-cli)"
+		echo -e "${YELLOWCOLOUR}gp\t\t${RESETCOLOUR}opens graphical pinging module"
+		echo -e "${YELLOWCOLOUR}trace\t\t${RESETCOLOUR}traces packets to specified host"
+		echo -e "${YELLOWCOLOUR}gtrace\t\t${RESETCOLOUR}traces packets to specified host in GUI"
+		echo -e "${YELLOWCOLOUR}nsl\t\t${RESETCOLOUR}lookup nameservers"
+		echo -e "${YELLOWCOLOUR}lhost\t\t${RESETCOLOUR}lookup hosts"
+
+		echo -e "\n${GREENCOLOUR}pymap\t\t${RESETCOLOUR}runs python network mapping module" 
+		echo -e "${GREENCOLOUR}pyport\t\t${RESETCOLOUR}runs python port scanning module"
+		echo -e "${GREENCOLOUR}ss\t\t${RESETCOLOUR}shows network stats" 
+		echo -e "${GREENCOLOUR}fapi\t\t${RESETCOLOUR}opens fing api calling module" 
+		echo -e "${GREENCOLOUR}wifiaudit\t\t${RESETCOLOUR}wifi auditing module"
+		echo -e "${GREENCOLOUR}scan\t\t${RESETCOLOUR}scans for wireless networks around you"
+		echo -e "${GREENCOLOUR}who\t\t${RESETCOLOUR}WHOIS lookup"
+		echo -e "${GREENCOLOUR}ipl\t\t${RESETCOLOUR}finds information about specified IP" 
         echo ""
         echo ""
-		RED='\033[0;31m'
-		printf "${RED}exit/quit/q: exits program\n"
-		echo "================================================================" | lolcat
+		echo -e "${REDCOLOUR}exit/quit/q: exits program${RESETCOLOUR}"
+		echo "================================================================"
 	
 	elif [[ $prompt_input == "" ]] ; then
 
